@@ -1,0 +1,10 @@
+#!/home/iulian/workspace/Test_Pyramid/env/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'ZEO==4.2.0b1','console_scripts','runzeo'
+__requires__ = 'ZEO==4.2.0b1'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('ZEO==4.2.0b1', 'console_scripts', 'runzeo')()
+    )

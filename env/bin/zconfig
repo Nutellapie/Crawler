@@ -1,0 +1,4 @@
+#!/home/iulian/workspace/Test_Pyramid/env/bin/python
+# EASY-INSTALL-SCRIPT: 'ZConfig==3.0.4','zconfig'
+__requires__ = 'ZConfig==3.0.4'
+__import__('pkg_resources').run_script('ZConfig==3.0.4', 'zconfig')
