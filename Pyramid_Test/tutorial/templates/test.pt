@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+
+  </title>
+  <!-- Meta Tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }" />
+
+</head>
+<div tal:replace="structure form" />
+
+<body tal:replace="nothing">
+  <div class="row" tal:repeat="field form">
+    <div class="span2">
+      ${structure:field.title}
+      <span class="req" tal:condition="field.required">*</span>
+    </div>
+    <div class="span2">
+      ${structure:field.serialize()}
+    </div>
+    <ul tal:condition="field.error">
+      <li tal:repeat="error field.error.messages()">
+        ${structure:error}
+      </li>
+    </ul>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="resurse/js/bootstrap.min.js"></script>
+
+
+
+  <script type="text/javascript">
+    deform.load()
+  </script>
+</body>
+
+</html>
