@@ -1,5 +1,6 @@
 #!./bin/python
 # -*- coding: utf-8 -*-
+
 from lxml.cssselect import CSSSelector
 import requests
 from lxml import html
@@ -10,18 +11,8 @@ from lxml import etree
 import pdb
 import datainput
 import re
+from xml.etree.ElementTree import fromstring
 
-'''
-class obiect (object):
-
-    def __init__(self, c1, c2, c3, c4, c5, c6):
-        self.prescurtare = c1
-        self.denumire = c2
-        self.valuta_cumparare = c3
-        self.valuta_vanzare = c4
-        self.sucursala = c5
-        self.timp = c6
-'''
 
 data_de_azi = datetime.date.today()
 
@@ -47,7 +38,7 @@ def bnr():       # MERGE -  DATABASE OBJECT
     return list_obj
 
 
-def volksbank():      # MAI TREBUIE LUCRAT /s  - DATABASE OBJECT
+def volksbank():
 
     STARTING_URL = 'http://www.volksbank.ro/ro/AfisareCursValutar'
 
@@ -56,58 +47,72 @@ def volksbank():      # MAI TREBUIE LUCRAT /s  - DATABASE OBJECT
     # print (etree.tostring(tree,encoding = unicode, pretty_print = True))
     e = tree.xpath('//tr/td/span/text()')  # 33 - 71 CURS
 
-    '''
     contor = 33
-    list_obj = []
-    while(contor < 72):dd
-        if e[contor] != None:
-            list_obj.append(e[contor])
-        contor = contor + 1
-    '''
-    pdb.set_trace()
+
+    while(contor < 72):
+        if contor == 49 :
+	           contor = 51
+
+        valoare = re.sub(r"[^A-Za-z]+", ' ', str(e[contor]))
+
+        if valoare[0] == ' ':
+            datainput.main(valoare[1:4],valoare[1:4],str(e[contor+2]),str(e[contor+1]),'VolksBank',data_de_azi)
+        else:
+            datainput.main(valoare[0:3],valoare[0:3],str(e[contor+2]),str(e[contor+1]),'VolksBank',data_de_azi)
+
+#        print e[contor],e[contor+1],e[contor+2]
+
+        if contor < 43 :
+            contor = contor + 5
+        elif contor >= 43 and contor < 49 :
+            contor = contor + 3
+        else :
+            contor = contor + 3
+
+#    pdb.set_trace()
 
 
-def alphabank():  # DATABASE OBJECT
+def alphabank():
     STARTING_URL = 'https://www.alphabank.ro/ro/rate/rate_si_dobanzi.php'
+    page = requests.get(STARTING_URL)
     tree = html.fromstring(page.text)
 
-    page = requests.get(STARTING_URL)
     # print (etree.tostring(tree,encoding = unicode, pretty_print = True))
     e = tree.xpath('//tr[@height="18"]/td[@class="stilTd1"]/text()')
     z = tree.xpath('//tr[@height="18"]/td[@class="stilTd2"]/text()')
 
-    list_obj = []
-
     contor = 0
 
     while contor < len(e):
-        obiect_1 = obiect(e[contor], e[contor + 2], e[contor + 3], 'AlphaBank',
-                          data_de_azi)
-        print e[contor], e[contor + 2], e[contor + 3], 'AlphaBank', data_de_azi
-        contor = contor + 6
-        list_obj.append(obiect_1)
+        valoare = re.sub(r"[^A-Za-z]+", ' ', str(e[contor]))
+        valoare_1 = re.sub(r"[^A-Za-z]+", ' ', str(z[contor]))
 
-    pdb.set_trace()
+        datainput.main(valoare[(len(valoare) - 4):(len(valoare)-1)], valoare[0:(len(
+            valoare) - 4)], str(e[contor + 3]), str(e[contor + 2]), 'AlphaBank', data_de_azi)
+
+        datainput.main(valoare_1[(len(valoare_1) - 4):(len(valoare_1)-1)], valoare_1[0:(len(valoare_1) - 4)], str(z[contor + 3]), str(z[contor + 2]), 'AlphaBank', data_de_azi)
+
+#        print valoare[0:(len(valoare) - 4)], valoare[(len(valoare) - 4):(len(valoare))], e[contor + 2], e[contor + 3], 'AlphaBank', data_de_azi
+# print valoare_1[0:(len(valoare_1) - 4)], valoare_1[(len(valoare_1) -
+# 4):(len(valoare_1))], z[contor + 2], z[contor + 3], 'AlphaBank',
+# data_de_azi
+
+        contor = contor + 6
+#    pdb.set_trace()
 
 
 def bcr():
     STARTING_URL = 'http://www.bcr.ro/ro/curs-valutar'
 
-    e = fromstring(r.get("https://www.bcr.ro/ro/curs-valutar",
-                         headers={'User-Agent': 'Something'}).text)
-    z = e.xpath('//table[@class="overview glaze fullsize"]/tr/td')
-
-    print z[1].text
-
+    e = fromstring(requests.get("https://www.bcr.ro/ro/curs-valutar",
+                                headers={'User-Agent': 'Something'}).text)
+    z = e.xpath('//table[@class="overview glaze fullsize"]/tr/td/text()')
     contor = 1
-    list_obj = []
+
     while contor < len(z):
-        obiect_1 = obiect(z[contor].text, z[contor + 1].text, z[contor + 2].text,
-                          'BCR', data_de_azi)
-        print z[contor].text, z[contor + 1].text, z[contor + 2].text, 'BCR', data_de_azi
+        print z[contor], z[contor + 1], z[contor + 2], 'BCR', data_de_azi
         contor = contor + 4
 
-        list_obj.append(obiect_1)
     pdb.set_trace()
 
 
@@ -116,14 +121,15 @@ def raiffeisen():
 
     page = requests.get(STARTING_URL)
     tree = html.fromstring(page.text)
-    z = tree.xpath('//table/tr/td')
+    z = tree.xpath('//table/tr/td/text()')
 
     contor = 4
 
     while contor < 122:
-        print z[contor].text, z[contor + 1].text, z[contor + 3].text, z[contor + 4].text, 'Raiffeisen', data_de_azi
-        obiect_1 = obiect(z[contor].text, z[contor + 1].text, z[contor + 3].text,
-                          'Raiffeisen', data_de_azi)
+        datainput.main(str(z[contor + 1]), str(z[contor]), str(z[contor + 4]),
+                       str(z[contor + 3]), 'Raiffeisen', data_de_azi)
+# print z[contor], z[contor + 1], z[contor + 3], z[contor + 4],
+# 'Raiffeisen', data_de_azi
         contor = contor + 7
 
     pdb.set_trace()
@@ -138,9 +144,11 @@ def garantibank():
 
     contor = 6
     while contor < len(z):
-        print z[contor], z[contor + 2], z[contor + 3], z[contor + 5], z[contor + 6]
+        datainput.main(str(z[contor]), str(z[contor]), str(z[contor + 5]),
+                       str(z[contor + 2]), 'GarantiBank', data_de_azi)
+#        print z[contor], z[contor + 2], z[contor + 5]
         contor = contor + 7
-    pdb.set_trace()
+#    pdb.set_trace()
 
 
 def piraeus():
@@ -148,13 +156,17 @@ def piraeus():
 
     page = requests.get(STARTING_URL)
     tree = html.fromstring(page.text)
-    z = tree.xpath('//tr/td/span')
+    z = tree.xpath('//tr/td/span/text()')
 
-    contor = 11
-    while (contor < 26):
-        print z[contor].text, z[contor + 1].text, z[contor + 2].text
+    contor = 10
+    while (contor < 25):
+        valoare_1 = re.sub(r"[^0-9-,-.]+", '', str(z[contor + 1]))
+        valoare_2 = re.sub(r"[^0-9-,-.]+", '', str(z[contor + 2]))
+        datainput.main(str(z[contor]), str(z[contor]),
+                       valoare_2, valoare_1, 'PiraeusBank', data_de_azi)
+#        print str(z[contor]), valoare_1, valoare_2
         contor = contor + 3
-    pdb.set_trace()
+#    pdb.set_trace()
 
 
 def cecbank():
@@ -165,15 +177,18 @@ def cecbank():
     z = tree.xpath('//tbody/tr/td/text()')
 
     contor = 2
+    currency = ['USD', 'CHF', 'GBP', 'EUR']
+    currency_count = 0
     while contor < 30:
-        valoare = re.sub(r"[^A-Za-z]+", ' ',str(z[contor]))
-        valoare_1 = re.sub(r"[^0-9-.]+", '', str(z[contor+2]))
-        valoare_2 = re.sub(r"[^0-9-.]+", '', str(z[contor+3]))
-        datainput.main(valoare)
-        print valoare, valoare_1, valoare_2
-
+        valoare = re.sub(r"[^A-Za-z]+", ' ', str(z[contor]))
+        valoare_1 = re.sub(r"[^0-9-.]+", '', str(z[contor + 2]))
+        valoare_2 = re.sub(r"[^0-9-.]+", '', str(z[contor + 3]))
+        datainput.main(currency[currency_count], valoare,
+                       valoare_2, valoare_1, 'CecBank', data_de_azi)
+#        print currency[currency_count],valoare, valoare_1, valoare_2
+        currency_count = currency_count + 1
         contor = contor + 8
-    pdb.set_trace()
+#    pdb.set_trace()
 
 
 def bancpost():
@@ -181,13 +196,6 @@ def bancpost():
     page = requests.get(STARTING_URL)
     tree = html.fromstring(page.text)
     z = tree.xpath('//table[@class="forex"]/tbody/tr/td/text()')
-
-    '''
-    index = 0
-    for m in z :
-        print m, index
-        index = index + 1
-    '''
 
     contor = 2
     while(contor < 54):
@@ -330,7 +338,7 @@ def otpbank():
 
 
 def main():
-    cecbank()
+    bcr()
 
 if __name__ == "__main__":
     main()
