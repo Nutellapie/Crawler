@@ -9,7 +9,7 @@ def root_factory(request):
 
 def main(global_config, **settings):
     config = Configurator(settings=settings, root_factory=root_factory)
-    config.add_route('home', '')
+    config.add_route('home', '/home')
     config.include('pyramid_chameleon')
     config.add_route('contact', '/contact')
     config.add_route('sucursale', '/sucursale')
