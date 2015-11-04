@@ -11,6 +11,12 @@
     <link rel="stylesheet"
           href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }"/>
 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> 
+        <!--  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
   </head>
   <body>
 
@@ -23,8 +29,8 @@
           <ul class="nav navbar-nav">
             <li><a href="home">Home</a></li>
             <li class="active"><a href="sucursale">Sucursale</a></li>
-            <li><a href="detalii">Detalii</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="detalii" data-transition="slide">Detalii</a></li>
+            <li><a href="contact" data-transition="slide">Contact</a></li>
           </ul>
         </div>
       </div>
