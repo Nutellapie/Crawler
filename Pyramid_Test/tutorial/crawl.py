@@ -135,7 +135,7 @@ def raiffeisen():
 # 'Raiffeisen', data_de_azi
         contor = contor + 7
 
-    pdb.set_trace()
+#    pdb.set_trace()
 
 
 def garantibank():
@@ -212,9 +212,10 @@ def bancpost():
     while(contor < 54):
         numar, nume = str(z[contor]).split()
 #        datainput.main(nume,nume,str(z[contor+2]),str(z[contor+3]),'BancPost',data_de_azi)
+        print numar,nume
         contor = contor + 6
-        pdb.set_trace()
 #        print nume, nume, z[contor + 2], z[contor + 3],'BancPost',data_de_azi
+        pdb.set_trace()
 
 #    pdb.set_trace()
 
@@ -293,7 +294,7 @@ def crediteuropebank():
         contor = contor + 4 + marire
         list_contor = list_contor + 1
 
-    pdb.set_trace()
+#    pdb.set_trace()
 
 
 def carpaticabank():
@@ -352,9 +353,24 @@ def otpbank():
 #        print z[contor],z[contor+1],z[contor+2],z[contor+3],data_de_azi,'OTP'
         contor = contor + 4
 
+def apelare() :
+    otpbank()
+    volksbank()
+    alphabank()
+    raiffeisen()
+    garantibank()
+    piraeus()
+    cecbank()
+    brdbank()
+    bancatransilvania()
+    bancaromaneasca()
+    crediteuropebank()
+    carpaticabank()
+    librabank()
+    otpbank()
 
 def main():
-    bancpost()
+    apelare()
 
 if __name__ == "__main__":
     main()

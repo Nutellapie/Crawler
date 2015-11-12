@@ -14,7 +14,8 @@ def main(global_config, **settings):
     config.add_route('contact', '/contact')
     config.add_route('sucursale', '/sucursale')
     config.add_route('detalii', '/detalii')
-    config.add_route('test', '/test')
+    config.add_route('test_2', '/test_2')
+    config.add_route('test','/test')
     config.add_static_view(name = 'templates', path = 'tutorial:templates')
     config.add_static_view(name = 'resurse', path = 'tutorial:resurse')
 

@@ -1,44 +1,28 @@
-import unittest
-
-from pyramid import testing
-
-
-class TutorialViewTests(unittest.TestCase):
-    def setUp(self):
-        self.config = testing.setUp()
-
-    def tearDown(self):
-        testing.tearDown()
-
-    def test_home(self):
-        from .views import home
-
-        request = testing.DummyRequest()
-        response = home(request)
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Visit', response.body)
-
-    def test_hello(self):
-        from .views import hello
-
-        request = testing.DummyRequest()
-        response = hello(request)
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Go back', response.body)
+from pyramid.response import Response
+from pyramid.view import view_config
+from pyramid import request
+from crawl import main
+from pyramid.view import view_defaults
+from pyramid.response import Response
 
 
-class TutorialFunctionalTests(unittest.TestCase):
-    def setUp(self):
-        from tutorial import main
-        app = main({})
-        from webtest import TestApp
+@view_config(route_name='test_2', renderer='templates/test_2.pt')
+def home(request):
+    return {'name': 'Test'}
 
-        self.testapp = TestApp(app)
+'''
+@view_defaults(route_name='test_2', renderer='templates/test_2.pt')
+class Test_2_Views(object) :
+    def __init__ (self,request):
+        self.request = request
 
-    def test_home(self):
-        res = self.testapp.get('/', status=200)
-        self.assertIn(b'<body>Visit', res.body)
+    @view_config(request_method='GET')
+    def get(self):
+        return Response('get')
 
-    def test_hello(self):
-        res = self.testapp.get('/howdy', status=200)
-        self.assertIn(b'<body>Go back', res.body)
+    @view_config(request_method='POST')
+    def post(self):
+        return Response('post')
+'''
+def includeme(config):
+    config.scan(__name__)
