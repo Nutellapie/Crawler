@@ -3,26 +3,19 @@ from pyramid.view import view_config
 from pyramid import request
 from crawl import main
 from pyramid.view import view_defaults
-from pyramid.response import Response
+import pyramid.view
+import fetch
+
+tuple_date = fetch.main()
 
 
 @view_config(route_name='test_2', renderer='templates/test_2.pt')
 def home(request):
-    return {'name': 'Test'}
+    items = { 'studentlist' : [ {'nume':'alice', 'value':22},
+                      {'nume':'bob', 'value':11},
+                      {'nume':'charlie', 'value':33} ] }
 
-'''
-@view_defaults(route_name='test_2', renderer='templates/test_2.pt')
-class Test_2_Views(object) :
-    def __init__ (self,request):
-        self.request = request
+    return {'obj': 'obj', 'name': 'Test', 'studentlist':items}
 
-    @view_config(request_method='GET')
-    def get(self):
-        return Response('get')
-
-    @view_config(request_method='POST')
-    def post(self):
-        return Response('post')
-'''
 def includeme(config):
     config.scan(__name__)
