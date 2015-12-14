@@ -3,7 +3,7 @@ import datetime
 from datainput import BazaDeDate, EntryDB
 
 def main():
-    db = BazaDeDate('./Data.fs')
+    db = BazaDeDate('Data.fs')
     dbroot = db.dbroot
     data_de_azi = datetime.date.today()
     list_1 = []
@@ -31,6 +31,7 @@ def main():
             list_1.append(str(obj.Timp))
             contor = contor + 7
     db.close()
+    
     return tuple(list_1)
 
 if __name__ == "__main__":

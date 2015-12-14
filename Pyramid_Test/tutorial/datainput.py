@@ -27,7 +27,7 @@ class EntryDB (Persistent) :
         self.Timp = Timp
 
 def main (_presc , _denumire , _valuta_cumparare, _valuta_vanzare , _sucursala , _timp) :
-    db = BazaDeDate('./Data.fs')
+    db = BazaDeDate('Data.fs')
     dbroot = db.dbroot
 
     item = EntryDB(_presc, _denumire , _valuta_cumparare, _valuta_vanzare , _sucursala , _timp)

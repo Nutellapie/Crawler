@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>${name}</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }" />
+
+    <title>Quick Tutorial: ${name}</title>
+  </head>
+  <body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resurse/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <ul tal:repeat="cv studentList" >
+          <p> ${cv["nume"]} ${cv["value"]} </p>
+        </ul>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nume</th>
+            <th>Curs Cumparare</th>
+            <th>Curs Vanzare</th>
+            <th>Detalii</th>
+          </tr>
+        </thead>
+        <tbody>
+          <div>
+           <tr>
+            <ul tal:repeat="ceva date.values()" >
+                <th> ${ceva[0]} </th>
+                <th> ${ceva[1]} </th>
+                <th> ${ceva[2]} </th>
+
+            </ul>
+
+
+           </tr>
+          </div>
+        </tbody>
+      </table>
+    </div>
+  </body>
+
+
+</html>

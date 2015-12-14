@@ -1,0 +1,952 @@
+Entry Nou : 
+AlphaBank-SEK-2015-11-26
+SEK
+ COROANA SUEDEZA 
+0.4765
+0.4826
+AlphaBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-JPY-2015-11-26
+JPY
+100 yeni japonezi
+3.3500
+3.4500
+Raiffeisen
+2015-11-26
+Entry Nou : 
+BRD-HUF-2015-11-26
+HUF
+FORINT UNGARIA
+1.4840
+1.3290
+BRD
+2015-11-26
+Entry Nou : 
+BancaTransilvania-SEK-2015-11-26
+SEK
+ Coroana suedeza
+0.4872
+0.4704
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+CarpaticaBank-GBP-2015-11-26
+GBP
+GBP
+ 6,3300 
+ 6,1800 
+CarpaticaBank
+2015-11-26
+Entry Nou : 
+VolksBank-SEK-2015-11-26
+SEK
+SEK
+0,4717
+0,4882
+VolksBank
+2015-11-26
+Entry Nou : 
+LibraBank-PLN-2015-11-26
+PLN
+PLN
+1,0850
+0,9900
+LibraBank
+2015-11-26
+Entry Nou : 
+CarpaticaBank-USD-2015-11-26
+USD
+USD
+ 4,2400 
+ 4,1400 
+CarpaticaBank
+2015-11-26
+Entry Nou : 
+AlphaBank-CHF-2015-11-26
+CHF
+ FRANC ELVETIAN 
+4.0677
+4.1181
+AlphaBank
+2015-11-26
+Entry Nou : 
+CreditEuropeBank-GBP-2015-11-26
+GBP
+Lira sterlina
+6,2700
+6,4000
+CreditEuropeBank
+2015-11-26
+Entry Nou : 
+OTP-NOK-2015-11-26
+NOK
+Coroana norvegiana
+0.5057
+0.4543
+OTP
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-NOK-2015-11-26
+NOK
+NOK
+0.4744
+0.4944
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+GarantiBank-JPY-2015-11-26
+JPY
+JPY
+3,38010
+3,44840
+GarantiBank
+2015-11-26
+Entry Nou : 
+LibraBank-CAD-2015-11-26
+CAD
+CAD
+3,1950
+3,0950
+LibraBank
+2015-11-26
+Entry Nou : 
+CecBank-EUR-2015-11-26
+EUR
+ Euro 
+4.4000
+4.4600
+CecBank
+2015-11-26
+Entry Nou : 
+PiraeusBank-EUR-2015-11-26
+EUR
+EUR
+4,3980
+4,4880
+PiraeusBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-AUD-2015-11-26
+AUD
+1 dolar australian
+2.9700
+3.0700
+Raiffeisen
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-AUD-2015-11-26
+AUD
+AUD
+2.9614
+3.0764
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+OTP-AUD-2015-11-26
+AUD
+Dolar australian
+3.0870
+2.9730
+OTP
+2015-11-26
+Entry Nou : 
+OTP-GBP-2015-11-26
+GBP
+Lira sterlina
+6.4520
+6.2080
+OTP
+2015-11-26
+Entry Nou : 
+AlphaBank-CAD-2015-11-26
+CAD
+ DOLAR CANADIAN 
+3.1266
+3.1653
+AlphaBank
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-GBP-2015-11-26
+GBP
+GBP
+6.2417
+6.3997
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+Raiffeisen-USD-2015-11-26
+USD
+1 dolar SUA
+4.0900
+4.2250
+Raiffeisen
+2015-11-26
+Entry Nou : 
+VolksBank-NOK-2015-11-26
+NOK
+NOK
+0,4759
+0,4929
+VolksBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-SEK-2015-11-26
+SEK
+1 coroana suedeza
+0.4710
+0.4910
+Raiffeisen
+2015-11-26
+Entry Nou : 
+BancaTransilvania-AUD-2015-11-26
+AUD
+ Dolar australian
+3.0765
+2.9707
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+GarantiBank-EUR-2015-11-26
+EUR
+EUR
+4,40130
+4,48130
+GarantiBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-USD-2015-11-26
+USD
+ Dolar american
+4.2495
+4.1239
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-USD-2015-11-26
+USD
+USD
+4.1507
+4.2077
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+OTP-USD-2015-11-26
+USD
+Dolar american
+4.2820
+4.0980
+OTP
+2015-11-26
+Entry Nou : 
+BancaTransilvania-HUF-2015-11-26
+HUF
+ Forint unguresc
+0.014452
+0.013955
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+VolksBank-HUF-2015-11-26
+HUF
+HUF
+1,3872
+1,4657
+VolksBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-PLN-2015-11-26
+PLN
+ Zlot polonez
+1.0570
+1.0207
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+VolksBank-DKK-2015-11-26
+DKK
+DKK
+0,5863
+0,6068
+VolksBank
+2015-11-26
+Entry Nou : 
+LibraBank-JPY-2015-11-26
+JPY
+JPY
+3,5450
+3,3550
+LibraBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-HUF-2015-11-26
+HUF
+100 forinti maghiari
+1.3700
+1.4700
+Raiffeisen
+2015-11-26
+Entry Nou : 
+VolksBank-EUR-2015-11-26
+EUR
+EUR
+4,3900
+4,5100
+VolksBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-EGP-2015-11-26
+EGP
+1 lira egipteana
+0.0000
+0.0000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+BRD-CAD-2015-11-26
+CAD
+DOLAR CANADA
+3.2330
+3.0780
+BRD
+2015-11-26
+Entry Nou : 
+BRD-EUR-2015-11-26
+EUR
+EURO
+4.5200
+4.3700
+BRD
+2015-11-26
+Entry Nou : 
+Raiffeisen-MDL-2015-11-26
+MDL
+1 leu moldovenesc
+0.0000
+0.0000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+Raiffeisen-GBP-2015-11-26
+GBP
+1 lira sterlina
+6.1900
+6.4000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+GarantiBank-CHF-2015-11-26
+CHF
+CHF
+4,04790
+4,12970
+GarantiBank
+2015-11-26
+Entry Nou : 
+OTP-PLN-2015-11-26
+PLN
+Zlot polonez
+1.1120
+0.9780
+OTP
+2015-11-26
+Entry Nou : 
+Raiffeisen-TRL-2015-11-26
+TRL
+1 lira turceasca
+0.0000
+0.0000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+CreditEuropeBank-CHF-2015-11-26
+CHF
+Francul elvetian
+4,0300
+4,1500
+CreditEuropeBank
+2015-11-26
+Entry Nou : 
+VolksBank-JPY-2015-11-26
+JPY
+JPY
+3,3519
+3,4841
+VolksBank
+2015-11-26
+Entry Nou : 
+PiraeusBank-HUF100-2015-11-26
+HUF100
+HUF100
+1,3780
+1,4700
+PiraeusBank
+2015-11-26
+Entry Nou : 
+AlphaBank-GBP-2015-11-26
+GBP
+ LIRA STERLINA 
+6.2889
+6.3667
+AlphaBank
+2015-11-26
+Entry Nou : 
+LibraBank-GBP-2015-11-26
+GBP
+GBP
+6,3650
+6,2600
+LibraBank
+2015-11-26
+Entry Nou : 
+PiraeusBank-CHF-2015-11-26
+CHF
+CHF
+4,0170
+4,1600
+PiraeusBank
+2015-11-26
+Entry Nou : 
+VolksBank-GBP-2015-11-26
+GBP
+GBP
+6,2288
+6,4456
+VolksBank
+2015-11-26
+Entry Nou : 
+CarpaticaBank-EUR-2015-11-26
+EUR
+EUR
+ 4,4480 
+ 4,4120 
+CarpaticaBank
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-JPY-2015-11-26
+JPY
+JPY
+3.3481
+3.4781
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+CreditEuropeBank-SEK-2015-11-26
+SEK
+Coroana suedeza
+0,4460
+0,5000
+CreditEuropeBank
+2015-11-26
+Entry Nou : 
+OTP-JPY-2015-11-26
+JPY
+Yen japonez
+0.0356
+0.0324
+OTP
+2015-11-26
+Entry Nou : 
+AlphaBank-USD-2015-11-26
+USD
+ DOLAR SUA 
+4.1596
+4.2108
+AlphaBank
+2015-11-26
+Entry Nou : 
+BRD-NOK-2015-11-26
+NOK
+COROANE NORVEGIA
+0.4950
+0.4680
+BRD
+2015-11-26
+Entry Nou : 
+VolksBank-CHF-2015-11-26
+CHF
+CHF
+4,0268
+4,1693
+VolksBank
+2015-11-26
+Entry Nou : 
+BRD-CHF-2015-11-26
+CHF
+FRANC ELVETIA
+4.1920
+3.9950
+BRD
+2015-11-26
+Entry Nou : 
+BancaTransilvania-JPY-2015-11-26
+JPY
+ Yen Japonez
+0.034753
+0.033558
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+Raiffeisen-CZK-2015-11-26
+CZK
+1 coroana ceha
+0.0000
+0.0000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+AlphaBank-EUR-2015-11-26
+EUR
+ EURO 
+4.4350
+4.4550
+AlphaBank
+2015-11-26
+Entry Nou : 
+PiraeusBank-USD-2015-11-26
+USD
+USD
+4,1390
+4,2290
+PiraeusBank
+2015-11-26
+Entry Nou : 
+GarantiBank-TRY-2015-11-26
+TRY
+TRY
+1,41780
+1,46100
+GarantiBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-EUR-2015-11-26
+EUR
+1 euro
+4.3700
+4.5100
+Raiffeisen
+2015-11-26
+Entry Nou : 
+BancaTransilvania-CAD-2015-11-26
+CAD
+ Dolar canadian
+3.1986
+3.0886
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+Raiffeisen-RUB-2015-11-26
+RUB
+1 rubla ruseasca
+0.0000
+0.0000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+CecBank-USD-2015-11-26
+USD
+ Dolar american 
+4.1300
+4.2300
+CecBank
+2015-11-26
+Entry Nou : 
+OTP-CAD-2015-11-26
+CAD
+Dolar canadian
+3.2420
+3.0580
+OTP
+2015-11-26
+Entry Nou : 
+BRD-GBP-2015-11-26
+GBP
+LIRA STERLINA
+6.4620
+6.1970
+BRD
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-CAD-2015-11-26
+CAD
+CAD
+3.0881
+3.1981
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+Raiffeisen-PLN-2015-11-26
+PLN
+1 zlot polonez
+0.0000
+0.0000
+Raiffeisen
+2015-11-26
+Entry Nou : 
+LibraBank-NOK-2015-11-26
+NOK
+NOK
+0,5300
+0,4350
+LibraBank
+2015-11-26
+Entry Nou : 
+OTP-CHF-2015-11-26
+CHF
+Franc elvetian
+4.1400
+4.0400
+OTP
+2015-11-26
+Entry Nou : 
+BancaTransilvania-CZK-2015-11-26
+CZK
+ Coroana ceha
+0.1671
+0.1614
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-CHF-2015-11-26
+CHF
+CHF
+4.0088
+4.1258
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+LibraBank-DKK-2015-11-26
+DKK
+DKK
+0,6500
+0,5400
+LibraBank
+2015-11-26
+Entry Nou : 
+OTP-HUF-2015-11-26
+HUF
+Forint ungar
+0.0147
+0.0137
+OTP
+2015-11-26
+Entry Nou : 
+VolksBank-CAD-2015-11-26
+CAD
+CAD
+3,0956
+3,2065
+VolksBank
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-EUR-2015-11-26
+EUR
+EUR
+4.4095
+4.4765
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+CecBank-CHF-2015-11-26
+CHF
+ Franc elvetian 
+4.0300
+4.1300
+CecBank
+2015-11-26
+Entry Nou : 
+OTP-EUR-2015-11-26
+EUR
+EURO
+4.5100
+4.3700
+OTP
+2015-11-26
+Entry Nou : 
+VolksBank-PLN-2015-11-26
+PLN
+PLN
+1,0191
+1,0672
+VolksBank
+2015-11-26
+Entry Nou : 
+LibraBank-CHF-2015-11-26
+CHF
+CHF
+4,1400
+4,0400
+LibraBank
+2015-11-26
+Entry Nou : 
+Raiffeisen-DKK-2015-11-26
+DKK
+1 coroana daneza
+0.5850
+0.6050
+Raiffeisen
+2015-11-26
+Entry Nou : 
+AlphaBank-NOK-2015-11-26
+NOK
+ COROANA NORVEGIANA 
+0.4806
+0.4869
+AlphaBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-EUR-2015-11-26
+EUR
+ Euro
+4.4885
+4.3885
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+AlphaBank-AUD-2015-11-26
+AUD
+ DOLAR AUSTRALIAN 
+3.0066
+3.0435
+AlphaBank
+2015-11-26
+Entry Nou : 
+BRD-SEK-2015-11-26
+SEK
+COROANE SUEDIA
+0.4900
+0.4640
+BRD
+2015-11-26
+Entry Nou : 
+CreditEuropeBank-USD-2015-11-26
+USD
+Dolarul SUA
+4,1200
+4,2400
+CreditEuropeBank
+2015-11-26
+Entry Nou : 
+CarpaticaBank-CHF-2015-11-26
+CHF
+CHF
+ 4,1400 
+ 4,0100 
+CarpaticaBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-NOK-2015-11-26
+NOK
+ Coroana norvegiana
+0.4914
+0.4745
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+LibraBank-HUF-2015-11-26
+HUF
+HUF
+1,5450
+1,3550
+LibraBank
+2015-11-26
+Entry Nou : 
+PiraeusBank-GBP-2015-11-26
+GBP
+GBP
+6,2560
+6,3980
+PiraeusBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-DKK-2015-11-26
+DKK
+ Coroana daneza
+0.6054
+0.5845
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+Raiffeisen-CHF-2015-11-26
+CHF
+1 franc elvetian
+3.9800
+4.1250
+Raiffeisen
+2015-11-26
+Entry Nou : 
+VolksBank-USD-2015-11-26
+USD
+USD
+4,1133
+4,2663
+VolksBank
+2015-11-26
+Entry Nou : 
+LibraBank-EUR-2015-11-26
+EUR
+EUR
+4,4800
+4,4000
+LibraBank
+2015-11-26
+Entry Nou : 
+BRD-CZK-2015-11-26
+CZK
+COROANA CEHIA
+0.1720
+0.1560
+BRD
+2015-11-26
+Entry Nou : 
+Raiffeisen-NOK-2015-11-26
+NOK
+1 coroana norvegiana
+0.4750
+0.4950
+Raiffeisen
+2015-11-26
+Entry Nou : 
+CecBank-GBP-2015-11-26
+GBP
+ Lira sterlina 
+6.2200
+6.3700
+CecBank
+2015-11-26
+Entry Nou : 
+CreditEuropeBank-JPY-2015-11-26
+JPY
+Yen japonez
+3,3500
+3,5100
+CreditEuropeBank
+2015-11-26
+Entry Nou : 
+GarantiBank-USD-2015-11-26
+USD
+USD
+4,14210
+4,22580
+GarantiBank
+2015-11-26
+Entry Nou : 
+LibraBank-SEK-2015-11-26
+SEK
+SEK
+0,5250
+0,4300
+LibraBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-CHF-2015-11-26
+CHF
+ Franc elvetian
+4.1610
+4.0179
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+CreditEuropeBank-EUR-2015-11-26
+EUR
+Euro
+4,4100
+4,4900
+CreditEuropeBank
+2015-11-26
+Entry Nou : 
+AlphaBank-DKK-2015-11-26
+DKK
+ COROANA DANEZA 
+0.5922
+0.5995
+AlphaBank
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-SEK-2015-11-26
+SEK
+SEK
+0.4708
+0.4878
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+OTP-SEK-2015-11-26
+SEK
+Coroana suedeza
+0.5057
+0.4543
+OTP
+2015-11-26
+Entry Nou : 
+BRD-DKK-2015-11-26
+DKK
+COROANA DANEMARCA
+0.6090
+0.5770
+BRD
+2015-11-26
+Entry Nou : 
+Raiffeisen-CAD-2015-11-26
+CAD
+1 dolar canadian
+3.0900
+3.1900
+Raiffeisen
+2015-11-26
+Entry Nou : 
+AlphaBank-JPY-2015-11-26
+JPY
+ YENI JAPONEZI 
+3.3923
+3.4343
+AlphaBank
+2015-11-26
+Entry Nou : 
+BancaRomaneasca-DKK-2015-11-26
+DKK
+DKK
+0.5854
+0.6054
+BancaRomaneasca
+2015-11-26
+Entry Nou : 
+OTP-DKK-2015-11-26
+DKK
+Coroana danemarca
+0.6220
+0.5780
+OTP
+2015-11-26
+Entry Nou : 
+BRD-USD-2015-11-26
+USD
+DOLAR SUA
+4.2720
+4.0960
+BRD
+2015-11-26
+Entry Nou : 
+LibraBank-USD-2015-11-26
+USD
+USD
+4,2250
+4,1450
+LibraBank
+2015-11-26
+Entry Nou : 
+BancaTransilvania-GBP-2015-11-26
+GBP
+ Lira sterlina
+6.4175
+6.2278
+BancaTransilvania
+2015-11-26
+Entry Nou : 
+GarantiBank-GBP-2015-11-26
+GBP
+GBP
+6,24730
+6,37360
+GarantiBank
+2015-11-26
