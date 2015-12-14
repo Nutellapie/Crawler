@@ -25,6 +25,8 @@
     <ul tal:repeat="cv studentList" >
           <p> ${cv["nume"]} ${cv["value"]} </p>
         </ul>
+
+        ${date}
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -36,18 +38,11 @@
           </tr>
         </thead>
         <tbody>
-          <div>
-           <tr>
-            <ul tal:repeat="ceva date.values()" >
-                <th> ${ceva[0]} </th>
-                <th> ${ceva[1]} </th>
-                <th> ${ceva[2]} </th>
-
-            </ul>
-
-
-           </tr>
-          </div>
+          <tr tal:repeat="ceva date">
+            <td>${ceva[0]}</td>
+            <td>${ceva[1]}</td>
+            <td>${ceva[2]}</td>
+         </tr>
         </tbody>
       </table>
     </div>

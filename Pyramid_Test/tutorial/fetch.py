@@ -3,7 +3,7 @@ import datetime
 from datainput import BazaDeDate, EntryDB
 
 def main():
-    db = BazaDeDate('Data.fs')
+    db = BazaDeDate('./Data.fs')
     dbroot = db.dbroot
     data_de_azi = datetime.date.today()
     list_1 = []
@@ -21,7 +21,7 @@ def main():
             print 'Sucursala :', obj.Sucursala
             print 'Timp :', obj.Timp
             '''
-
+            '''
             list_1.append(obj.Id)
             list_1.append(obj.Simbol)
             list_1.append(obj.Nume)
@@ -29,10 +29,13 @@ def main():
             list_1.append(obj.Curs_Vanzare)
             list_1.append(obj.Sucursala)
             list_1.append(str(obj.Timp))
-            contor = contor + 7
+            '''
+            list_1.append(obj.Simbol)
+            list_1.append(obj.Curs_Cumparare)
+            list_1.append(obj.Curs_Vanzare)
+#            contor = contor + 7
     db.close()
-    
-    return tuple(list_1)
+    return list_1
 
 if __name__ == "__main__":
     main()
