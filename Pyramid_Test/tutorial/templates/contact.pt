@@ -28,7 +28,7 @@
           <ul class="nav navbar-nav">
             <li><a href="home">Home</a></li>
             <li><a href="sucursale">Sucursale</a></li>
-            <li><a href="detalii">Detalii</a></li>
+            <li><a href="detalii">Cursuri</a></li>
             <li class="active"><a href="contact">Contact</a></li>
           </ul>
         </div>

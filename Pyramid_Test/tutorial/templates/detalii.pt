@@ -10,10 +10,13 @@
     <!-- Bootstrap -->
     <link rel="stylesheet"
           href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }"/>
-
+    <!-- Jquery -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <!--  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resurse/js/bootstrap.min.js"></script>
 
 
 
@@ -29,20 +32,18 @@
           <ul class="nav navbar-nav">
             <li><a href="home">Home</a></li>
             <li><a href="sucursale">Sucursale</a></li>
-            <li class="active"><a href="detalii" >Detalii</a></li>
+            <li class="active"><a href="detalii" >Cursuri</a></li>
             <li><a href="contact" data-transition="slide">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resurse/js/bootstrap.min.js"></script>
-
-
+    <ul class="nav nav-pills">
+       <li role="presentation" class="active"><a href="#">Valuta_1</a></li>
+       <li role="presentation"><a href="#">Valuta_2</a></li>
+       <li role="presentation"><a href="#">Etc</a></li>
+    </ul>
 
   </body>
 </html>

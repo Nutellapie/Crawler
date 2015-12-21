@@ -8,7 +8,7 @@ import crawl
 import itertools
 import operator
 
-crawl.main()
+#crawl.main()
 tuple_date = fetch.main()
 
 def grouper(n, iterable, fillvalue=None):
@@ -19,7 +19,7 @@ def grouper(n, iterable, fillvalue=None):
 date_lista = list(grouper(3,tuple_date))
 lista_sortata = sorted(date_lista, key = operator.itemgetter(0))
 
-import pdb; pdb.set_trace()
+
 
 
 

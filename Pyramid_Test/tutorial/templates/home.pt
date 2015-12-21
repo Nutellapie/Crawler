@@ -24,7 +24,7 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="home">Home</a></li>
           <li><a href="sucursale" data-transition="slide">Sucursale</a></li>
-          <li><a href="detalii" data-transition="slide">Detalii</a></li>
+          <li><a href="detalii" data-transition="slide">Cursuri</a></li>
           <li><a href="contact" data-transition="slide">Contact</a></li>
         </ul>
       </div>
@@ -43,7 +43,7 @@
 
   <div class="container">
     <h2>Cursuri Valutare Oradea</h2>
-    <p>Data : {current.date}</p>
+    <p>Data : ${data_astazi}</p>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -55,24 +55,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{denumire}</td>
-            <td>{valoare_c}</td>
-            <td>{valoare_v}</td>
-            <td>{click}</td>
-          </tr>
-          <tr>
-            <td>{denumire}</td>
-            <td>{valoare_c}</td>
-            <td>{valoare_v}</td>
-            <td>{click}</td>
-          </tr>
-          <tr>
-            <td>{denumire}</td>
-            <td>{valoare_c}</td>
-            <td>{valoare_v}</td>
-            <td>{click}</td>
-          </tr>
+          <tr tal:repeat="ceva lista">
+            <td>${ceva[0]}</td>
+            <td>${ceva[1]}</td>
+            <td>${ceva[2]}</td>
+            <td>Click</td>
+         </tr>
         </tbody>
       </table>
     </div>
