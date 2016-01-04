@@ -54,7 +54,7 @@ lista_noua = list(grouper(3,lista_noua))
 
 @view_config(route_name='home', renderer='templates/home.pt')
 def home(request):
-    return {'name': 'Home','date' : lista_sortata,'data_astazi' : data_curenta
+    return {'name': 'Home','data_astazi' : data_curenta
               ,'lista' : lista_noua}
 
 

@@ -17,7 +17,7 @@ class BazaDeDate (object):
         self.storage.close()
 
 class EntryDB (Persistent) :
-    def __init__(self, Simbol, Nume, Curs_Vanzare, Curs_Cumparare, Sucursala, Timp) :
+    def __init__(self, Simbol, Nume, Curs_Cumparare, Curs_Vanzare, Sucursala, Timp) :
         self.Id = str(Sucursala) + '-' + str(Simbol) + '-' + str(Timp)
         self.Simbol = Simbol
         self.Nume = Nume

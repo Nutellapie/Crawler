@@ -37,7 +37,7 @@ def bnr():       # MERGE -  DATABASE OBJECT
         list_obj.append(obiect_1)
     return list_obj
 
-
+'''
 def volksbank():
 
     STARTING_URL = 'http://www.volksbank.ro/ro/AfisareCursValutar'
@@ -52,17 +52,19 @@ def volksbank():
     while(contor < 72):
         if contor == 49:
             contor = 51
+        import pdb; pdb.set_trace()
 
         valoare = re.sub(r"[^A-Za-z]+", ' ', str(e[contor]))
 
         if valoare[0] == ' ':
             datainput.main(valoare[1:4], valoare[1:4], str(
-                e[contor + 2]), str(e[contor + 1]), 'VolksBank', data_de_azi)
+                e[contor + 1]), str(e[contor + 2]), 'VolksBank', data_de_azi)
+#            print valoare[1:4],e[contor+1],e[contor+2]
         else:
             datainput.main(valoare[0:3], valoare[0:3], str(
-                e[contor + 2]), str(e[contor + 1]), 'VolksBank', data_de_azi)
+                e[contor + 1]), str(e[contor + 2]), 'VolksBank', data_de_azi)
+#            print valoare[0:3],e[contor+1],e[contor+2]
 
-#        print e[contor],e[contor+1],e[contor+2]
 
         if contor < 43:
             contor = contor + 5
@@ -73,7 +75,7 @@ def volksbank():
 
 #    pdb.set_trace()
 
-
+'''
 def alphabank():
     STARTING_URL = 'https://www.alphabank.ro/ro/rate/rate_si_dobanzi.php'
     page = requests.get(STARTING_URL)
@@ -90,15 +92,16 @@ def alphabank():
         valoare_1 = re.sub(r"[^A-Za-z]+", ' ', str(z[contor]))
 
         datainput.main(valoare[(len(valoare) - 4):(len(valoare) - 1)], valoare[0:(len(
-            valoare) - 4)], str(e[contor + 3]), str(e[contor + 2]), 'AlphaBank', data_de_azi)
+            valoare) - 4)], str(e[contor + 2]), str(e[contor + 3]), 'AlphaBank', data_de_azi)
 
         datainput.main(valoare_1[(len(valoare_1) - 4):(len(valoare_1) - 1)], valoare_1[0:(
-            len(valoare_1) - 4)], str(z[contor + 3]), str(z[contor + 2]), 'AlphaBank', data_de_azi)
+            len(valoare_1) - 4)], str(z[contor + 2]), str(z[contor + 3]), 'AlphaBank', data_de_azi)
 
-#        print valoare[0:(len(valoare) - 4)], valoare[(len(valoare) - 4):(len(valoare))], e[contor + 2], e[contor + 3], 'AlphaBank', data_de_azi
-# print valoare_1[0:(len(valoare_1) - 4)], valoare_1[(len(valoare_1) -
-# 4):(len(valoare_1))], z[contor + 2], z[contor + 3], 'AlphaBank',
-# data_de_azi
+#        print valoare[(len(valoare) - 4):(len(valoare) - 1)], valoare[0:(len(
+#            valoare) - 4)], str(e[contor + 2]), str(e[contor + 3]), 'AlphaBank', data_de_azi
+#        print valoare_1[(len(valoare_1) - 4):(len(valoare_1) - 1)], valoare_1[0:(
+#            len(valoare_1) - 4)], str(z[contor + 2]), str(z[contor + 3]), 'AlphaBank', data_de_azi
+
 
         contor = contor + 6
 #    pdb.set_trace()
@@ -128,11 +131,12 @@ def raiffeisen():
 
     contor = 4
 
-    while contor < 122:
-        datainput.main(str(z[contor + 1]), str(z[contor]), str(z[contor + 4]),
-                       str(z[contor + 3]), 'Raiffeisen', data_de_azi)
-# print z[contor], z[contor + 1], z[contor + 3], z[contor + 4],
-# 'Raiffeisen', data_de_azi
+    while contor < 122 :
+        if(int(float(z[contor+3])) > 0 or int(float(z[contor+4])) > 0):
+            datainput.main(str(z[contor + 1]), str(z[contor]), str(z[contor + 3]),
+                       str(z[contor + 4]), 'Raiffeisen', data_de_azi)
+#            print z[contor+1], z[contor], z[contor + 3], z[contor + 4], 'Raiffeisen', data_de_azi
+
         contor = contor + 7
 
 #    pdb.set_trace()
@@ -147,8 +151,8 @@ def garantibank():
 
     contor = 6
     while contor < len(z):
-        datainput.main(str(z[contor]), str(z[contor]), str(z[contor + 5]),
-                       str(z[contor + 2]), 'GarantiBank', data_de_azi)
+        datainput.main(str(z[contor]), str(z[contor]), str(z[contor + 2]),
+                       str(z[contor + 5]), 'GarantiBank', data_de_azi)
 #        print z[contor], z[contor + 2], z[contor + 5]
         contor = contor + 7
 #    pdb.set_trace()
@@ -165,9 +169,11 @@ def piraeus():
     while (contor < 25):
         valoare_1 = re.sub(r"[^0-9-,-.]+", '', str(z[contor + 1]))
         valoare_2 = re.sub(r"[^0-9-,-.]+", '', str(z[contor + 2]))
-        datainput.main(str(z[contor]), str(z[contor]),
-                       valoare_2, valoare_1, 'PiraeusBank', data_de_azi)
-#        print str(z[contor]), valoare_1, valoare_2
+        valoare = re.sub(r"[^A-Za-z]+", ' ', str(z[contor]))
+        valoare = valoare.strip()
+        datainput.main(valoare, valoare, valoare_1, valoare_2,
+                        'PiraeusBank', data_de_azi)
+#        print valoare, valoare_1, valoare_2
         contor = contor + 3
 #    pdb.set_trace()
 
@@ -186,8 +192,9 @@ def cecbank():
         valoare = re.sub(r"[^A-Za-z]+", ' ', str(z[contor]))
         valoare_1 = re.sub(r"[^0-9-.]+", '', str(z[contor + 2]))
         valoare_2 = re.sub(r"[^0-9-.]+", '', str(z[contor + 3]))
+        valoare = valoare.strip()
         datainput.main(currency[currency_count], valoare,
-                       valoare_2, valoare_1, 'CecBank', data_de_azi)
+                       valoare_1, valoare_2, 'CecBank', data_de_azi)
 #        print currency[currency_count],valoare, valoare_1, valoare_2
         currency_count = currency_count + 1
         contor = contor + 8
@@ -230,6 +237,8 @@ def brdbank():
     while contor < 100:
         datainput.main(str(z[contor + 1]), str(z[contor]),
                        str(z[contor + 5]), str(z[contor + 6]), 'BRD', data_de_azi)
+        if contor >= 93 :
+            break
         contor = contor + 9
 #        print z[contor], z[contor + 1], z[contor + 5], z[contor + 6]
 #        pdb.set_trace()
@@ -243,10 +252,12 @@ def bancatransilvania():
 
     contor = 6
     while contor < 95:
-        datainput.main(str(z[contor]), str(z[contor + 1]), str(z[contor + 3]),
+        datainput.main(str(z[contor]), str(z[contor + 1]).strip(), str(z[contor + 3]),
                        str(z[contor + 4]), 'BancaTransilvania', data_de_azi)
         contor = contor + 7
-#        print z[contor], z[contor + 1], z[contor + 3], z[contor + 4]
+        if contor >= 90:
+            break
+#        print z[contor], z[contor + 1].strip(), z[contor + 3], z[contor + 4]
 #        pdb.set_trace()
 
 
@@ -263,7 +274,7 @@ def bancaromaneasca():
     contor = 0
     while contor < len(z):
         datainput.main(str(z[contor]), str(z[contor]), str(
-            z[contor + 6]), str(z[contor + 5]), 'BancaRomaneasca', data_de_azi)
+            z[contor + 5]), str(z[contor + 6]), 'BancaRomaneasca', data_de_azi)
 #        print z[contor], z[contor + 5], z[contor + 6]
         contor = contor + 7
 
@@ -289,7 +300,7 @@ def crediteuropebank():
             marire = 0
 
         datainput.main(prescurtari[list_contor], str(z[contor]), str(
-            z[contor + 3 + marire]), str(z[contor + 2 + marire]), 'CreditEuropeBank', data_de_azi)
+            z[contor + 2 + marire]), str(z[contor + 3 + marire]), 'CreditEuropeBank', data_de_azi)
 #        print prescurtari[list_contor], z[contor], z[contor + 2 + marire], z[contor + 3 + marire]
         contor = contor + 4 + marire
         list_contor = list_contor + 1
@@ -308,9 +319,9 @@ def carpaticabank():
     while contor < len(z):
         numar, nume = str(z[contor]).split()
         datainput.main(nume, nume, str(
-            z[contor + 1]), str(z[contor + 2]), 'CarpaticaBank', data_de_azi)
+            z[contor + 1]).strip(), str(z[contor + 2]).strip(), 'CarpaticaBank', data_de_azi)
+#        print nume, nume, z[contor + 1].strip(), z[contor + 2].strip(), 'CarpaticaBank', data_de_azi
         contor = contor + 3
-#        print nume, nume, z[contor + 1], z[contor + 2], 'CarpaticaBank', data_de_azi
 #        pdb.set_trace()
 
 
@@ -327,8 +338,8 @@ def librabank():
         numar, nume = str(z[contor]).split()
         datainput.main(nume, nume, str(
             z[contor + 1]), str(z[contor + 2]), 'LibraBank', data_de_azi)
+#        print nume, nume,z[contor+1],z[contor+2],data_de_azi,'LibraBank'
         contor = contor + 3
-    #        print z[contor],z[contor+1],z[contor+2],data_de_azi,'LibraBank'
 
 
 #    pdb.set_trace()
@@ -355,7 +366,7 @@ def otpbank():
 
 def apelare() :
     otpbank()
-    volksbank()
+#    volksbank()
     alphabank()
     raiffeisen()
     garantibank()

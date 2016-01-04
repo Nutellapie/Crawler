@@ -9,16 +9,11 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet"
-          href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }"/>
+          href="${request.static_url('tutorial:resurse/css/bootstrap.min.css') }"/>
     <!-- Jquery -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resurse/js/bootstrap.min.js"></script>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -39,11 +34,18 @@
       </div>
     </nav>
 
-    <ul class="nav nav-pills">
-       <li role="presentation" class="active"><a href="#">Valuta_1</a></li>
-       <li role="presentation"><a href="#">Valuta_2</a></li>
-       <li role="presentation"><a href="#">Etc</a></li>
-    </ul>
+
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Cursul
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <div tal:repeat = "ceva date_simboluri">
+          <li><a href="${ceva[0:3]}">${ceva[0:3]}</a></li>
+       </div>
+      </ul>
+    </div>
 
   </body>
 </html>

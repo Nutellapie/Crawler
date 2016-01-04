@@ -17,10 +17,3 @@ def contact(request):
 @view_config(route_name='sucursale', renderer='templates/banci.pt')
 def sucursale(request):
     return {'name': 'Sucursale'}
-
-# /detalii
-
-
-@view_config(route_name='detalii', renderer='templates/detalii.pt')
-def detalii(request):
-    return {'name': 'Detalii'}
