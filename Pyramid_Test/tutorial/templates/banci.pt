@@ -11,8 +11,6 @@
     <link rel="stylesheet"
           href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }"/>
 
-
-
   </head>
   <body>
 
@@ -38,6 +36,29 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="resurse/js/bootstrap.min.js"></script>
 
+
+    <div class="container">
+
+    <div class="jumbotron">
+      <h1>Lista Banci Oradea</h1>
+      <p> loremipsum</p>
+    </div>
+
+    <div class="row">
+      <div tal:repeat= "ceva date_banca">
+       <div class="col-md-4">
+         <h2>${ceva}</h2>
+         
+       </div>
+       <div class="col-md-4">
+         <h2></h2>
+       </div>
+       <div class="col-md-4">
+         <h2>Harta</h2>
+       </div>
+     </div>
+   </div>
+  </div>
 
 
   </body>

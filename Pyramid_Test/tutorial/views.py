@@ -10,10 +10,3 @@ from pyramid.httpexceptions import HTTPFound
 @view_config(route_name='contact', renderer='templates/contact.pt')
 def contact(request):
     return {'name': 'Contact Form'}
-
-# /banci
-
-
-@view_config(route_name='sucursale', renderer='templates/banci.pt')
-def sucursale(request):
-    return {'name': 'Sucursale'}
