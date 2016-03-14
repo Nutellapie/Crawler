@@ -123,13 +123,14 @@ def bcr():
 
 
 def raiffeisen():
-    STARTING_URL = "http://www.raiffeisen.ro/curs-valutar"
+    STARTING_URL = "https://www.raiffeisen.ro/persoane-fizice/curs-valutar/"
 
     page = requests.get(STARTING_URL)
     tree = html.fromstring(page.text)
     z = tree.xpath('//table/tr/td/text()')
 
     contor = 4
+    import pdb; pdb.set_trace()
 
     while contor < 122 :
         if(int(float(z[contor+3])) > 0 or int(float(z[contor+4])) > 0):
@@ -176,30 +177,6 @@ def piraeus():
 #        print valoare, valoare_1, valoare_2
         contor = contor + 3
 #    pdb.set_trace()
-
-
-def cecbank():
-    STARTING_URL = "https://www.cec.ro/curs-valutar"
-
-    page = requests.get(STARTING_URL)
-    tree = html.fromstring(page.text)
-    z = tree.xpath('//tbody/tr/td/text()')
-
-    contor = 2
-    currency = ['USD', 'CHF', 'GBP', 'EUR']
-    currency_count = 0
-    while contor < 30:
-        valoare = re.sub(r"[^A-Za-z]+", ' ', str(z[contor]))
-        valoare_1 = re.sub(r"[^0-9-.]+", '', str(z[contor + 2]))
-        valoare_2 = re.sub(r"[^0-9-.]+", '', str(z[contor + 3]))
-        valoare = valoare.strip()
-        datainput.main(currency[currency_count], valoare,
-                       valoare_1, valoare_2, 'CecBank', data_de_azi)
-#        print currency[currency_count],valoare, valoare_1, valoare_2
-        currency_count = currency_count + 1
-        contor = contor + 8
-#    pdb.set_trace()
-
 
 def bancpost():
     STARTING_URL = "https://www.bancpost.ro/Bancpost/Financiare/Istoric-Curs-Valutar"
@@ -345,13 +322,14 @@ def librabank():
 #    pdb.set_trace()
 
 def otpbank():
-    STARTING_URL = "https://persoanefizice.otpbank.ro/ro/curs-valutar"
+    STARTING_URL = "https://www.otpbank.ro/curs-valutar"
     page = requests.get(STARTING_URL)
 
     tree = html.fromstring(page.text)
     z = tree.xpath('//tr/td[position()<5]/text()')
 
     contor = 0
+
     while contor < len(z):
         pres = str(z[contor])
         nume = str(z[contor + 1])
@@ -364,21 +342,20 @@ def otpbank():
 #        print z[contor],z[contor+1],z[contor+2],z[contor+3],data_de_azi,'OTP'
         contor = contor + 4
 
+
 def apelare() :
-    otpbank()
+    otpbank()    #  EROARE CAUTARE
 #    volksbank()
     alphabank()
-    raiffeisen()
+#    raiffeisen()   EROARE CAUTARE
     garantibank()
     piraeus()
-    cecbank()
     brdbank()
     bancatransilvania()
     bancaromaneasca()
     crediteuropebank()
     carpaticabank()
     librabank()
-    otpbank()
 
 def main():
     apelare()

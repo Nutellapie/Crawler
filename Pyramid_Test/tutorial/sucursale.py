@@ -15,10 +15,14 @@ import datetime
 
 dictionar_banci = {'OTP' : 'Strada x', 'Cec' : 'Strada z'}
 
+nume_banci_lista = ['OTP','RAIF']
+locatie_banci_lista = ['STRADA Z','STRADA X']
+
 
 @view_config(route_name='sucursale', renderer='templates/banci.pt')
 def sucursale(request):
-    return {'name': 'Sucursale', 'date_banca' : dictionar_banci}
+    return {'name': 'Sucursale', 'nume_banci' : nume_banci_lista,
+            'locatie_banci' : locatie_banci_lista}
 
 def includeme(config):
     config.scan(__name__)

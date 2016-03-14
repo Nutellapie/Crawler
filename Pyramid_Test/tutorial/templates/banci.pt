@@ -1,65 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>${name}</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet"
-          href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }"/>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>${name}</title>
 
-  </head>
-  <body>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="${request.static_url('tutorial:resurse//css/bootstrap.min.css') }" />
+  <style>
+    section {
+      width: 700px;
+      height: 210px;
+      padding: 10px;
+      background-color: blue;
+      text-align : right;
+    }
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="home">CVO.ro</a>
-        </div>
-        <div>
-          <ul class="nav navbar-nav">
-            <li><a href="home">Home</a></li>
-            <li class="active"><a href="sucursale">Sucursale</a></li>
-<!--            <li><a href="detalii" data-transition="slide">Cursuri</a></li> -->
-            <li><a href="contact" data-transition="slide">Contact</a></li>
-          </ul>
-        </div>
+    #map {
+      width: 50%;
+      height: 200px;
+      background-color: #CCC;
+      float: left;
+    }
+
+    #text {
+      width: 50%;
+      height: 200px;
+      float: right;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home">CVO.ro</a>
       </div>
-    </nav>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="home">Home</a></li>
+          <li class="active"><a href="sucursale">Sucursale</a></li>
+          <!--            <li><a href="detalii" data-transition="slide">Cursuri</a></li> -->
+          <li><a href="contact" data-transition="slide">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resurse/js/bootstrap.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="resurse/js/bootstrap.min.js"></script>
 
 
-    <div class="container">
+  <div class="container">
 
     <div class="jumbotron">
       <h1>Lista Banci Oradea</h1>
-      <p> loremipsum</p>
     </div>
 
-    <div class="row">
-      <div tal:repeat= "ceva date_banca">
-       <div class="col-md-4">
-         <h2>${ceva}</h2>
-         
+    <div id="Banci">
+      <div id="B1">
+        <div tal:repeat= "denumire nume_banci ">
+
+         <section id="repeat">
+           <div id="map">
+             <script>
+               function initMap() {
+                 var mapDiv = document.getElementById('map');
+                 var map = new google.maps.Map(mapDiv, {
+                   center: {
+                     lat: 44.540,
+                     lng: -78.546
+                   },
+                   zoom: 8
+                 });
+               }
+             </script>
+
+             <script src="https://maps.googleapis.com/maps/api/js/?callback=initMap"
+                        async defer>
+             </script>
+           </div>
+
+           <div id="text">
+            <p>${denumire}</p>
+            <p>${locatie_banci}</p>
+          </div>
+        </section>
        </div>
-       <div class="col-md-4">
-         <h2></h2>
-       </div>
-       <div class="col-md-4">
-         <h2>Harta</h2>
-       </div>
-     </div>
-   </div>
+      </div>
+    </div>
   </div>
 
 
-  </body>
+</body>
+
 </html>
