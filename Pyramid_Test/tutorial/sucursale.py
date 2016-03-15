@@ -9,13 +9,7 @@ import itertools
 import operator
 import datetime
 
-
-
-
-
-dictionar_banci = {'OTP' : 'Strada x', 'Cec' : 'Strada z'}
-
-nume_banci_lista = ['OTP','RAIF']
+nume_banci_lista = ['OTP','RAIF','ING']
 locatie_banci_lista = ['STRADA Z','STRADA X']
 
 
